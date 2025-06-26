@@ -44,40 +44,42 @@ class RockPaperScissors:
             self.user_input = self.Scissors
 
     def beating(self, user, PC):
+        magenta = Fore.MAGENTA + Style.BRIGHT
+        reset = Style.RESET_ALL
         if user == self.rock and PC == self.rock:
-            PC_choice = "I chose rock"
+            PC_choice = magenta + "I chose rock" + reset
             print(PC_choice)
             self.draw()
         elif user == self.rock and PC == self.paper:
-            PC_choice ="I chose paper"
+            PC_choice = magenta + "I chose paper" + reset
             print(PC_choice)
             self.lose()
         elif user == self.rock and PC == self.Scissors:
-            PC_choice ="I chose Scissors"
+            PC_choice = magenta + "I chose Scissors" + reset
             print(PC_choice)
             self.win()
         elif user == self.paper and PC == self.rock:
-            PC_choice = "I chose rock"
+            PC_choice = magenta + "I chose rock" + reset
             print(PC_choice)
             self.win()
         elif user == self.paper and PC == self.paper:
-            PC_choice ="I chose paper"
+            PC_choice = magenta + "I chose paper" + reset
             print(PC_choice)
             self.draw()
         elif user == self.paper and PC == self.Scissors:
-            PC_choice ="I chose Scissors"
+            PC_choice = magenta + "I chose Scissors" + reset
             print(PC_choice)
             self.lose()
         elif user == self.Scissors and PC == self.rock:
-            PC_choice = "I chose rock"
+            PC_choice = magenta + "I chose rock" + reset
             print(PC_choice)
             self.lose()
         elif user == self.Scissors and PC == self.paper:
-            PC_choice ="I chose paper"
+            PC_choice = magenta + "I chose paper" + reset
             print(PC_choice)
             self.win()
         elif user == self.Scissors and PC == self.Scissors:
-            PC_choice ="I chose Scissors"
+            PC_choice = magenta + "I chose Scissors" + reset
             print(PC_choice)
             self.draw()
     def Final(self):
