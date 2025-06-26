@@ -7,18 +7,19 @@ class RockPaperScissors:
         self.paper = "paper"
         self.Scissors = "Scissors"  
         self.breaking = 0
+     
     def draw(self):
-        mesg = "It's a draw."
+        mesg = Fore.WHITE + Style.BRIGHT + "It's a draw." + Style.RESET_ALL
         print(mesg)
-        
+    
     def win(self):
-        mesg = "You won!"
+        mesg = Fore.GREEN + Style.BRIGHT + "You won!" + Style.RESET_ALL
         print(mesg)
-        
+    
     def lose(self):
-        mesg = "You lost!"
+        mesg = Fore.RED + Style.BRIGHT + "You lost!" + Style.RESET_ALL
         print(mesg)
-        
+       
     def random_selection(self):
         global list_class  
         list_class = [self.rock, self.paper, self.Scissors]
@@ -30,10 +31,10 @@ class RockPaperScissors:
             if self.user_input in list_class:
                 break
             elif self.user_input == "done":
-                print("bye")
+                print(Fore.BLUE + Style.BRIGHT + "bye" + Style.RESET_ALL)
                 quit()
             else:
-                print(Fore.RED + Style.BRIGHT + "Error. This option does not excist, Please try again." + Style.RESET_ALL)
+                print(Fore.RED + Style.BRIGHT + "Error. This option does not exist, Please try again." + Style.RESET_ALL)
                 continue   
         if self.user_input == "rock":
             self.user_input = self.rock
@@ -92,4 +93,4 @@ if __name__ == "__main__":
 # The game continues until the user decides to exit by typing "done".
 # The game provides feedback on whether the user won, lost, or drew.
 # to run this game, write : python playthis.py in the terminal. and then press enter.
-
+# The game uses colorama for colored output in the terminal.
