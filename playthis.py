@@ -36,7 +36,7 @@ class RockPaperScissors:
             if self.user_input in list_class:
                 break
             elif self.user_input == "done":
-                print(Fore.BLUE + Style.BRIGHT + "bye" + Style.RESET_ALL)
+                print(Fore.MAGENTA + Style.BRIGHT + "bye" + Style.RESET_ALL)
                 quit()
             else:
                 print(Fore.RED + Style.BRIGHT + "Error. This option does not exist, Please try again." + Style.RESET_ALL)
@@ -98,12 +98,14 @@ class RockPaperScissors:
         return f"Your score:{self.user_score} My Score:{self.PC_score}"
         self.user_won = None
     def Final(self):
-        while True:
+        while True:        git add playthis.py
+        git commit -m "Fix: update scoring logic and clean up playthis.py"
+        git push
             Random_int =  self.random_selection()
             self.inputing()
             self.beating(self.user_input, Random_int)
             self.result = self.claculating()
-            print(Fore.GREEN + Style.BRIGHT + self.result + Style.RESET_ALL)
+            print(Fore.WHITE + Style.BRIGHT + self.result + Style.RESET_ALL)
 if __name__ == "__main__":
     game = RockPaperScissors()
     game.Final()
